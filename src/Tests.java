@@ -1,0 +1,52 @@
+public class Tests {
+    //TODO:Здесь записывать код для тестов
+
+    public static void main(String[] args) {
+        //System.out.println(fractional(5.5));
+        //System.out.println(fractional(3.235));
+
+        //System.out.println(addAsStrings(3,2));
+
+        System.out.println(factorial(3));
+        System.out.println(factorial(0));
+        System.out.println(factorial(8));
+
+    }
+
+    static double fractional(double num) {
+        int b = (int) num;
+        //System.out.println(b);
+
+        return num-b;
+    }
+
+    static int addAsStrings(int n1, int n2) {
+        //String string = Integer.toString(n1) + Integer.toString(n2);
+        //int a;
+        return Integer.parseInt(Integer.toString(n1) + Integer.toString(n2));
+    }
+
+    static String textGrade(int grade) {
+        String mStringGrade = null;
+        if (grade == 0)                mStringGrade = "не оценено";
+        if (grade >=1 && grade <=20)   mStringGrade = "очень плохо";
+        if (grade >=21 && grade <=40)  mStringGrade = "плохо";
+        if (grade >=41 && grade <=60)  mStringGrade = "удовлетворительно";
+        if (grade >=61 && grade <=80)  mStringGrade = "хорошо";
+        if (grade >=81 && grade <=100) mStringGrade = "отлично";
+        if (grade >100)                mStringGrade = "не определено";
+        return mStringGrade;
+    }
+
+    static long factorial(long n){
+        long Result;
+        if (n==0) Result = 1L;
+        else {
+            Result=1L;
+            for (int i=1; i<=n; i++){
+                Result *=  i;
+            }
+        }
+        return Result;
+    }
+}
