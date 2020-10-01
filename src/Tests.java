@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Tests {
     //TODO:Здесь записывать код для тестов
 
@@ -7,11 +9,29 @@ public class Tests {
 
         //System.out.println(addAsStrings(3,2));
 
-        System.out.println(factorial(3));
-        System.out.println(factorial(0));
-        System.out.println(factorial(8));
+        //System.out.println(factorial(3));
+        //System.out.println(factorial(0));
+        //System.out.println(factorial(8));
+
+        int[] testArray = {1, 5, 8, 3, 22};
+        int[] testArray1 = {1, 23, 8, 13, 22};
+        int[] zeroArray = new int[0];
+        System.out.println(arrayMax(testArray));
+        System.out.println(arrayMax(testArray1));
+        System.out.println(arrayMax(zeroArray));
 
     }
+
+    static public int arrayMax(int[] a) {
+        Arrays.sort(a);
+        if (a.length > 0) {
+            return a[a.length - 1];
+        } else {
+            return 0;
+        }
+    }
+
+
 
     static double fractional(double num) {
         int b = (int) num;
