@@ -12,7 +12,7 @@ public class Tests {
         //System.out.println(factorial(3));
         //System.out.println(factorial(0));
         //System.out.println(factorial(8));
-
+        /*
         int[] testArray = {1, 5, 8, 3, 22};
         int[] testArray1 = {1, 23, 8, 13, 22};
         int[] zeroArray = new int[0];
@@ -20,7 +20,29 @@ public class Tests {
         System.out.println(arrayMax(testArray1));
         System.out.println(arrayMax(zeroArray));
 
+         */
+
+        System.out.println(juniorByte((byte) 0b01001010));
+        System.out.println(juniorByte((byte) 0b01001011));
+
     }
+
+    //Код возвращающий младший бит байта
+    static public int juniorByte(byte value) {
+        //byte value = (byte) 0b01001010;
+        byte keyValue = (byte) 0b00000001;
+        int result;
+
+        if ((value & keyValue) > 0){
+            result = 1;
+        } else {
+            result = 0;
+        }
+
+
+        return result;
+    }
+
 
     static public int arrayMax(int[] a) {
         Arrays.sort(a);
