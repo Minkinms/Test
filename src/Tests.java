@@ -27,6 +27,8 @@ public class Tests {
 
     }
 
+
+
     //Код возвращающий младший бит байта
     static public int juniorByte(byte value) {
         //byte value = (byte) 0b01001010;
