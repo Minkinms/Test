@@ -11,18 +11,18 @@ public class Animal implements FoodCompare, CompareWeight {
 
 
     public static void main(String[] args) {
-        Animal a = new Animal(20);
-        System.out.println(a.toString());
+        //Animal a = new Animal(20);
+        //System.out.println(a.toString());
 
-        Cow cow = new Cow(120);
-        Cow cow1 = new Cow(120);
+        //Cow cow = new Cow(120);
+        //Cow cow1 = new Cow(120);
         //System.out.println(cow.toStringFull());
 
-        Duck duck = new Duck(2.3);
-        Duck duck1 = new Duck(2.3);
+        //Duck duck = new Duck(2.3);
+        //Duck duck1 = new Duck(2.3);
         //System.out.println(duck.toStringFull());
 
-        Hamster hamster = new Hamster(0.5);
+        //Hamster hamster = new Hamster(0.5);
         //System.out.println(hamster.toStringFull());
 /*
         System.out.println(cow.equals(cow1));   //Разные Cows, одинаковый вес
@@ -37,11 +37,22 @@ public class Animal implements FoodCompare, CompareWeight {
         System.out.println(duck.compareFoodPrice(duck));
 
  */
-        System.out.println(duck.compareWeight(hamster));
+        /*System.out.println(duck.compareWeight(hamster));
         System.out.println(hamster.compareWeight(duck));
         System.out.println(duck.compareWeight(duck));
         System.out.println(duck.compareWeight(duck1));
         //System.out.println(duck.compareWeight(cat(2.0)));
+
+         */
+
+        CompareWeight[] array = new Animal[3];
+        array[0] = new Animal(3.0);
+        array[1] = new Animal(1.0);
+        array[2] = new Animal(2.0);
+        System.out.println(array[0] + " : " + array[1] + " : " + array[2]);
+        CompareWeight.sort(array);
+        System.out.println(array[0] + " : " + array[1] + " : " + array[2]);
+
     }
 
     //Переменные класса
@@ -144,7 +155,8 @@ public class Animal implements FoodCompare, CompareWeight {
 
     //Информация о животном в формате: I am <AnimalKind>, eat <FoodKind>
     public String toString(){
-        return "I am " + getKind() + ", eat " + getFoodKind();
+        //return "I am " + getKind() + ", eat " + getFoodKind();
+        return "My weight " + this.weight; //Изменил для нагладности проверки сортировки
     }
 
     //Определение коэффициента веса еды к весу тела животного.
