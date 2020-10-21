@@ -13,14 +13,14 @@ public class AbsInteger {
         short sh = 20;
         ShortInteger shortInteger = new ShortInteger(sh);
 
-        add(byteInteger, byteInteger1);
-        add(byteInteger, shortInteger);
+        System.out.println(add(byteInteger, byteInteger1));
+        //add(byteInteger, shortInteger);
 
     }
 
     //Метод вычисления суммы
     static AbsInteger add(AbsInteger num1, AbsInteger num2){
-       return num1.addNumbers(num1, num2);
+       return num1.addNumbers(num2);
 
         /*if (num1.equals(num2)){
             System.out.println("Объекты равны по классу");
@@ -50,14 +50,14 @@ public class AbsInteger {
 
     @Override
     AbsInteger addNumbers(AbsInteger num2) {
-            byte result;
-            num2 = (ByteInteger) num2;
-            result = (byte) (this.mByteNumber + ((ByteInteger) num2).mByteNumber);
-        if (this.getClass() == num1.getClass() && this.getClass() == num2.getClass()) {
-            return  result = (AbsInteger) result;
-        } else {
-            return 0;
-        }
+        //num2 = (ByteInteger) num2;
+
+        //        result = (byte) (this.mByteNumber + ((ByteInteger) num2).mByteNumber);
+    //    if (this.getClass() == num1.getClass() && this.getClass() == num2.getClass()) {
+    //        return  result = (AbsInteger) result;
+    //    } else {
+            return new ByteInteger((byte) (this.mByteNumber + ((ByteInteger) num2).mByteNumber));
+    //    }
 
     }
 
